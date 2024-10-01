@@ -1,0 +1,144 @@
+.header {
+  background: #343436;
+  height: 160px;
+  width: 100%;
+  color: #fff;
+  position: fixed;
+  z-index: 30;
+  a {
+    color: #fff;
+  }
+  &__logo {
+    max-width: 100px;
+    max-height: 100px;
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+}
+.header__body {
+  display: flex;
+  height: 160px;
+  align-items: center;
+}
+// when scroll header will--------------
+.scroll {
+  height: 50px;
+  opacity: 0.96;
+  .header__body {
+    height: 50px;
+  }
+}
+// ---------------------------------
+
+.burger__menu {
+  display: none;
+}
+.navigation {
+  display: flex;
+  flex: 1;
+  &__links {
+    flex: 1 0 200px;
+    justify-content: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    &:hover {
+      color: #6f5237;
+    }
+  }
+  & > ul {
+    display: inherit;
+    align-items: center;
+  }
+
+  &__socials {
+    display: flex;
+    li:not(:last-child) {
+      margin: 0 10px 0 0;
+    }
+  }
+}
+//- ---------------------------
+@media screen and (max-width: 767px) {
+  .navigation {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 2s;
+
+    &__links {
+      flex: 0;
+      flex-direction: inherit;
+    }
+    &__item:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+    &__socials {
+      margin-top: 30px;
+    }
+  }
+  .header {
+    a {
+      color: #343436;
+    }
+  }
+
+  .burger__menu {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    left: 87%;
+    z-index: 3;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    span {
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #fff;
+      transition: 3s;
+      &:nth-child(1) {
+        transform: translateY(8px);
+      }
+      &:nth-child(3) {
+        transform: translateY(16px);
+      }
+    }
+  }
+  .active.navigation {
+    top: 0;
+  }
+  .active {
+    span {
+      background: #343436;
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        transform: rotateZ(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+}

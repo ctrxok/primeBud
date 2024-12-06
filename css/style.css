@@ -625,6 +625,7 @@ main {
 }
 :root {
   --count: 0;
+  --itemWidth:370px ;
 }
 
 .team {
@@ -652,8 +653,8 @@ main {
   gap: 20px;
   background: #ffffff;
   text-align: center;
-  min-width: 370px;
-  padding: 70px 30px;
+  min-width: var(--itemWidth);
+  padding: 70px 10px;
   transform: translateX(var(--count));
   transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -705,6 +706,19 @@ main {
   margin: 0 -35px 0 0;
 }
 
+@media screen and (max-width: 880px) {
+  :root {
+    --itemWidth:300px ;
+  }
+}
+@media screen and (max-width: 720px) {
+  :root {
+    --itemWidth:250px ;
+  }
+  .panel__item:first-child {
+    margin-left: -21em;
+  }
+}
 .footer {
   color: #fff;
   background: #343436;

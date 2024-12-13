@@ -6,7 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PrimeBud</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/app.min.js"></script>
+    <script defer>
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k]
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({
+        key: "",
+        v: "beta",
+      });
+    </script>
   </head>
 </head>
 
@@ -195,6 +234,29 @@
                 </ul>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="sevices__container">
+            <h2 class="services__title">Services.</h2>
+            <p class="services__subtitle">We offer effective solutions that will simplify the work of your business, regardless of its size.</p>
+            <div class="services__contentService">
+              <div class="contentService__row">
+                <div class="contentService__element">01</div>
+                <div class="contentService__element">
+                  <h3 class="contentService__subtitle">For startups and SMEs</h3>
+                  <p class="contentService__text">The first few years are especially important for every young company, since approximately 80% of new businesses are closed due to operational problems. We provide startups and SMEs with full support.</p>
+                </div>
+              </div>
+              <div class="contentService__row">
+                <div class="contentService__element">02</div>
+                <div class="contentService__element">
+                  <h3 class="contentService__subtitle">For corporations</h3>
+                  <p class="contentService__text">The larger the company, the more it needs process control. We will help to keep everything under control and automate processes. You can concentrate on operational management and develop your company.</p>
+                </div>
+              </div>
+            </div>
+            <button class="services__button">Schedule a meeting</button>
           </div>
         </section>
         <section class="howWork">
@@ -442,8 +504,171 @@
             </div>
           </div>
         </section>
+        <section class="faq">
+          <div class="faq__container txt-cntr">
+            <h2 class="faq__title">FAQ.</h2>
+            <p class="faq__text">
+              Here are the most frequently asked questions by SMEs and
+              corporations
+            </p>
+            <div class="faq__content content">
+              <div class="content__column">
+                <ul class="content__list">
+                  <h3 class="content__subtitle">SMEs</h3>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary>
+                        <span>How can you be useful for us?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        We can take on most of the tasks related to your
+                        business. We simplify many processes and offer modern
+                        solutions, so you have more time left to deal directly
+                        with operational tasks.
+                      </p>
+                    </details>
+                  </li>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary><span>What services do you offer?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        We provide literally all kinds of services for business.
+                        These include web development, marketing, sales,
+                        integrations, analytics, accounting and much more.
+                      </p>
+                    </details>
+                  </li>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary>
+                        <span>What if we are only planning to enter the market?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        Of course, you can do without our services, but together
+                        with MDX Company you are more likely to build a great
+                        startup that can withstand the first few years of
+                        challenges.
+                      </p>
+                    </details>
+                  </li>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary><span>How can we check what you do?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        You will see the results from our cooperation in a
+                        month. In addition, every week we meet in person with
+                        our clients to tell what has been done and what are our
+                        plans for the next week.
+                      </p>
+                    </details>
+                  </li>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary>
+                        <span>What if we are not satisfied with your services?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        If you think that some of our services were not provided
+                        in full or not effective, you can terminate the contract
+                        and not pay the remaining amount.
+                      </p>
+                    </details>
+                  </li>
+                </ul>
+              </div>
+              <div class="content__column">
+                <ul class="content__list">
+                  <h3 class="content__subtitle">Large Corporations</h3>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary>
+                        <span>Do you have experience with large companies?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        Yes, for 12 years, we have worked with a large number of
+                        major companies and we know the specifics of their
+                        processes.
+                      </p>
+                    </details>
+                  </li>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary>
+                        <span>Do you have any custom plans for big companies?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        All our services are custom, depending on your needs and
+                        goals. The pricing for the services depends on the scope
+                        of work.
+                      </p>
+                    </details>
+                  </li>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary>
+                        <span>What if we want to make changes to the action plan?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        We think it's great when the business does not just
+                        follow our recommendations but participates in the
+                        process of developing an action plan. We can always
+                        adapt our services to your wishes.
+                      </p>
+                    </details>
+                  </li>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary>
+                        <span>Can I get exclusive offers for my company?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        We can discuss special conditions, depending on the
+                        amount of work and your budget. Please contact us for
+                        more details.
+                      </p>
+                    </details>
+                  </li>
+                  <li class="content__item">
+                    <details class="details">
+                      <summary>
+                        <span>Is support available?</span>
+                        <span>&#8249</span>
+                      </summary>
+                      <p class="content__text">
+                        Of course! We have built-in website support available
+                        24/7. In addition, you can always make an appointment
+                        and consult with our specialists.
+                      </p>
+                    </details>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="map">
+          <div id="map"></div>
+          <div class="map__infoWindow">
+            <h2 class="map__title">Contacts.</h2>
+            <h3 class="map__subtitle">Head office</h3>
+            <p class="map__text">26 Regent st., London, Great Britain</p>
+            <p class="map__text">+1 (234) 567 89 00</p>
+            <p class="map__text">mdx@email.com</p>
+            <button class="map__button">Schedule a meeting</button>
+          </div>
+        </section>
       </main>
-
       <footer class="footer"><div class="footer__container">
   <div class="footer__body">
     <div class="footer__column-about">
@@ -511,9 +736,5 @@
 </footer>
     </div>
   </body>
-</html>
-<!-- 
-   
-                 
-
--->
+  <script defer src="js/app.min.js"></script>
+  </html>

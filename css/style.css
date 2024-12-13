@@ -255,8 +255,8 @@ summary {
   max-height: 100px;
 }
 .header__logo img {
-  max-width: 100px;
-  max-height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 .header__body {
@@ -271,6 +271,10 @@ summary {
 }
 .scroll .header__body {
   height: 50px;
+}
+.scroll .header__logo {
+  max-width: 48px;
+  max-height: 48px;
 }
 
 .burger__menu {
@@ -425,11 +429,14 @@ main {
 }
 .aboutCompany__image {
   height: 510px;
+  width: 450px;
   position: relative;
   top: 105px;
 }
 .aboutCompany__image img {
+  width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 #whiteButton {
@@ -602,7 +609,7 @@ main {
   color: #fff;
   margin: 0 0 50px 0;
 }
-.services__content {
+.services__contentService {
   margin: 0 0 55px 0;
 }
 
@@ -648,11 +655,14 @@ main {
   }
 }
 .howWork {
-  background: url(../img/images/howWork-img.png) 50% bottom/cover no-repeat;
+  background: url(../img/images/howWork-img.png) top/cover no-repeat;
   padding-block: 100px;
 }
 .howWork__content {
-  max-width: 531px;
+  max-width: 731px;
+  background: #fff;
+  padding: 30px 30px;
+  border-radius: 30px;
 }
 
 .list {
@@ -794,9 +804,6 @@ main {
   :root {
     --itemWidth:250px ;
   }
-  .panel__item:first-child {
-    margin-left: -21em;
-  }
 }
 .map {
   height: 760px;
@@ -900,6 +907,14 @@ details[open]::details-content {
 .footer {
   color: #fff;
   background: #343436;
+}
+.footer__logo {
+  max-width: 100px;
+  max-height: 100px;
+}
+.footer__logo img {
+  width: 100%;
+  height: 100%;
 }
 .footer__body {
   padding: 100px 0 30px 0;

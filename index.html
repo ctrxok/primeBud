@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PrimeBud</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- test -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- end test -->
     <script defer>
       ((g) => {
-        var h,
+        let h,
           a,
           k,
           p = "The Google Maps JavaScript API",
@@ -18,7 +21,8 @@
           m = document,
           b = window;
         b = b[c] || (b[c] = {});
-        var d = b.maps || (b.maps = {}),
+
+        let d = b.maps || (b.maps = {}),
           r = new Set(),
           e = new URLSearchParams(),
           u = () =>
@@ -63,46 +67,53 @@
     <nav class="header__navigation navigation">
       <ul class="navigation__links">
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__link__text"
+          <a
+            href="#aboutCompany"
+            class="navigation__link navigation__link__text"
             >Про нас</a
           >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__link__text"
+          <a href="#services" class="navigation__link navigation__link__text"
             >Сервіси</a
           >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__link__text"
-            >Відгуки</a
+          <a href="#howWork" class="navigation__link navigation__link__text"
+            >Як ми працюємо</a
           >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__link__text">Кейси</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__link__text"
-            >Часті запитання</a
+          <a href="#team" class="navigation__link navigation__link__text"
+            >Команда</a
           >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__link__text"
-            >Наші контакти</a
+          <a href="#faq" class="navigation__link navigation__link__text"
+            >Запитання</a
+          >
+        </li>
+        <li class="navigation__item">
+          <a href="#contact" class="navigation__link navigation__link__text"
+            >кожного</a
           >
         </li>
       </ul>
       <ul class="socials">
         <li>
-          <a href=""><img src="img/insta.svg" alt="our instagram" /></a>
+          <a
+            href="https://www.instagram.com/prime.bud?igsh=MXdiZDlkM3J3OXpxdQ=="
+            ><img src="img/insta.svg" alt="our instagram"
+          /></a>
         </li>
         <li>
-          <a href="">
-            <img src="img/twitter.svg" alt="our twitterq" />
+          <a href="https://t.me/primebudtech">
+            <img src="img/telegram.svg" alt="our telegram" />
           </a>
         </li>
         <li>
-          <a href="">
-            <img src="img/youtube.svg" alt="our youtube" />
+          <a href="https://www.facebook.com/profile.php?id=61570426175669">
+            <img src="img/facebook.svg" alt="our facebook" />
           </a>
         </li>
       </ul>
@@ -113,13 +124,19 @@
       <main class="main">
         <section class="preview">
           <div class="preview__content">
-            <div>
+            <div 
+            data-aos="slide-left"
+            data-aos-duration="1000"
+            data-aos-delay="60"
+            data-aos-easing="ease-in-out"
+            data-aos-once="false"
+            >
               <h2 class="preview__title">PRIMEBUD – Будуємо майбутнє разом!</h2>
               <h3 class="preview__text">
                 Надійні рішення для вашого дому та бізнесу: якість, інновації, довіра.
               </h3>
               <button class="preview__button" style="margin-top: 40px">
-                Send a Request
+                Відправити запит
               </button>
             </div>
           </div>
@@ -130,8 +147,14 @@
         <section id="aboutCompany">
           <div class="aboutCompany__container">
             <div class="aboutCompany__body">
-              <div class="aboutCompany__columnText">
-                <h2 class="aboutCompany__title">Про компанію PRIMEBUD.</h2>
+              <div 
+              data-aos="slide-up"
+              data-aos-delay="400"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              class="aboutCompany__columnText">
+                <h2 class="aboutCompany__title" >Про компанію PRIMEBUD.</h2>
                 <h3 class="aboutCompany__subtitle">
                   We provide a full range of services to meet our clients'
                   requirements and help their businesses grow.
@@ -141,31 +164,33 @@
                 </p>
                 <ul class="socials">
                   <li>
-                    <a href=""
+                    <a
+                      href="https://www.instagram.com/prime.bud?igsh=MXdiZDlkM3J3OXpxdQ=="
                       ><img src="img/insta.svg" alt="our instagram"
                     /></a>
                   </li>
                   <li>
-                    <a href=""
-                      ><img src="img/twitter.svg" alt="our twitter"
-                    /></a>
+                    <a href="https://t.me/primebudtech">
+                      <img src="img/telegram.svg" alt="our telegram" />
+                    </a>
                   </li>
                   <li>
-                    <a href=""
-                      ><img src="img/youtube.svg" alt="our youtube"
-                    /></a>
+                    <a href="https://www.facebook.com/profile.php?id=61570426175669">
+                      <img src="img/facebook.svg" alt="our facebook" />
+                    </a>
                   </li>
                 </ul>
                 <div class="aboutCompany__butt">
-                  <button class="aboutCompany__button" id="whiteButton">
-                    Learn More
-                  </button>
-                  <button class="aboutCompany__button" id="colorButton">
-                    Contacs Us
-                  </button>
+                  <a href="#services"  class="aboutCompany__button wbtn" style="color: #8c7568;">Дізнайся більше</a>
+                  <a href="#contact" class="aboutCompany__button bhov" style="color: white;">Наші контакти</a>
                 </div>
               </div>
-              <div class="aboutCompany__image">
+              <div
+              data-aos="slide-right"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+              data
+              class="aboutCompany__image">
                 <img
                   src="img/images/aboutCompany-img.png"
                   alt="section image"
@@ -176,7 +201,9 @@
         </section>
         <section class="whyChoose">
           <div class="whyChoose__container">
-            <div class="whyChoose__top">
+            <div class="whyChoose__top"
+            data-aos="slide-up"
+            >
               <h2 class="whyChoose__title">Чому обирають PRIMEBUD.</h2>
               <h3 class="whyChoose__subtitle">
                 Довірте свій проєкт PRIMEBUD — і ми створимо для вас дім або простір, який надихає!
@@ -191,11 +218,6 @@
                 <div class="card__text">
                   Використовуємо лише перевірені матеріали та передові технології.
                 </div>
-                <ul class="card__list card__text">
-                  <li>Modern CMS</li>
-                  <li>Highly-loaded systems</li>
-                  <li>Elastic Scalability</li>
-                </ul>
               </div>
               <div class="cards__card card">
                 <div class="card__image">
@@ -205,11 +227,6 @@
                 <div class="card__text">
                   Впроваджуємо сучасні тренди будівництва та архітектури.
                 </div>
-                <ul class="card__list card__text">
-                  <li>Modern CMS</li>
-                  <li>Highly-loaded systems</li>
-                  <li>Elastic Scalability</li>
-                </ul>
               </div>
               <div class="cards__card card">
                 <div class="card__image">
@@ -219,46 +236,62 @@
                 <div class="card__text">
                   Працюємо прозоро та чесно, забезпечуючи клієнтам впевненість у результаті.
                 </div>
-                <ul class="card__list card__text">
-                  <li>Modern CMS</li>
-                  <li>Highly-loaded systems</li>
-                  <li>Elastic Scalability</li>
-                </ul>
               </div>
             </div>
           </div>
         </section>
-        <section class="services">
+        <section id="services"
+        class="services">
           <div class="sevices__container">
-            <h2 class="services__title">Services.</h2>
-            <p class="services__subtitle">We offer effective solutions that will simplify the work of your business, regardless of its size.</p>
+            <h2 class="services__title">Послуги.</h2>
+            <p class="services__subtitle">Ми пропонуємо ефективне рішення багатьох проблем.</p>
             <div class="services__contentService">
-              <div class="contentService__row">
+              <div
+              data-aos="slide-left" 
+              data-aos-duration="1000"
+              class="contentService__row">
                 <div class="contentService__element">01</div>
                 <div class="contentService__element">
-                  <h3 class="contentService__subtitle">For startups and SMEs</h3>
-                  <p class="contentService__text">The first few years are especially important for every young company, since approximately 80% of new businesses are closed due to operational problems. We provide startups and SMEs with full support.</p>
+                  <h3 class="contentService__subtitle">Відновлення зруйнованого житла</h3>
+                  <p class="contentService__text">TМи спеціалізуємося на відновленні будинків та квартир, пошкоджених внаслідок військових чи побутових дій. Команда PRIMEBUD виконує ремонтні роботи будь-якої складності, повертаючи житлу функціональність, комфорт та безпеку. Наш підхід — це швидкість, якість та увага до деталей, щоб ви могли знову відчути тепло свого дому.</p>
                 </div>
               </div>
-              <div class="contentService__row">
+              <div
+              data-aos="slide-right"
+              
+              data-aos-duration="1000"
+              class="contentService__row">
                 <div class="contentService__element">02</div>
                 <div class="contentService__element">
-                  <h3 class="contentService__subtitle">For corporations</h3>
-                  <p class="contentService__text">The larger the company, the more it needs process control. We will help to keep everything under control and automate processes. You can concentrate on operational management and develop your company.</p>
+                  <h3 class="contentService__subtitle">Будівництво «під ключ»</h3>
+                  <p class="contentService__text">Від фундаменту до оздоблення ми беремо на себе всі етапи будівництва. Використовуємо сучасні технології, якісні матеріали та дотримуємося встановлених термінів. PRIMEBUD гарантує надійність та довговічність кожного проєкту, створюючи простори, які служать роками та приносять комфорт.</p>
+                </div>
+              </div>
+              <div 
+              data-aos="slide-left"
+             
+              data-aos-duration="1000"
+              class="contentService__row">
+                <div class="contentService__element">03</div>
+                <div class="contentService__element">
+                  <h3 class="contentService__subtitle">Реконструкція та модернізація</h3>
+                  <p class="contentService__text">Оновлюємо житлові та комерційні об’єкти, надаючи їм нового вигляду та функціональності. Ми вдосконалюємо простори, впроваджуючи сучасні технології та покращуючи енергоефективність. З PRIMEBUD ви отримаєте результат, який перевершує очікування та забезпечує максимальний комфорт.</p>
                 </div>
               </div>
             </div>
-            <button class="services__button">Schedule a meeting</button>
+            <button class="services__button">Назначити зустріч</button>
           </div>
         </section>
-        <section class="howWork">
+        <section id="howWork"
+        class="howWork">
           <div class="howWork__container">
-            <div class="howWork__content">
+            <div
+            data-aos="fade-down-left"
+            data-aos-delay="500"
+            class="howWork__content">
               <h2 class="howWork__title">Як ми працюємо.</h2>
               <h3 class="howWork__subtitle">
-                Starting a cooperation with us is very simple. The whole process
-                is as transparent as possible. Take these 3 steps to enjoy the
-                benefits of working with us!
+                Почати співпрацю з нами дуже просто. Весь процес максимально прозорий. Виконайте ці 3 кроки, щоб насолоджуватися перевагами роботи з нами!
               </h3>
               <ul class="howWork__list list">
                 <li class="list__section">
@@ -310,11 +343,20 @@
             </div>
           </div>
         </section>
-        <section class="team">
+        <section 
+        id="team"
+        class="team">
           <div class="team__container">
-            <div class="team__content">
-              <h2 class="team__title">Our Team</h2>
-              <div class="team__panel panel">
+            <div 
+            data-aos="slide-up"
+            data-aos-duration="1000"
+            class="team__content">
+              <h2 class="team__title">Наша команда.</h2>
+              <div
+              data-aos="zoom-out-down"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+              class="team__panel panel">
                 <div class="panel__content">
                   <div class="panel__item">
                     <div class="panel__image">
@@ -325,143 +367,72 @@
                     </div>
                     <h3 class="panel__subtitle">Станіслав Баклаженко</h3>
                     <p class="panel__role">ІТ</p>
-                    <p class="panel__text">
-                      Most of all, Ann loves numbers in her work. She is ready
-                      to sit for hours with reports and diagrams so that your
-                      business receives real data and a clear vision of the
-                      future.
-                    </p>
-                    <div class="panel__socNetworks">
-                      <img src="img/insta.svg" alt="our instagram" />
-                      <img src="img/twitter.svg" alt="our twitter" />
-                      <img src="img/youtube.svg" alt="our youtube" />
-                    </div>
+                   
                   </div>
                   <div class="panel__item">
                     <div class="panel__image">
                       <img
-                        src="https://res2.weblium.site/res/5da36bfc5c96ee00270767df/5da387e2caca24002601e8f1_optimized_1396.webp"
+                        src="img/images/Slobod.jpg"
                         alt="person photo"
                       />
                     </div>
                     <h3 class="panel__subtitle">Євген Слободян</h3>
                     <p class="panel__role">Організатор будівельних робіт</p>
-                    <p class="panel__text">
-                      Our interaction does not end with paying for our services
-                      and introducing the planned technologies. Tim makes sure
-                      that all our customers are happy with the result of our
-                      work.
-                    </p>
-                    <div class="panel__socNetworks">
-                      <img src="img/insta.svg" alt="our instagram" />
-                      <img src="img/twitter.svg" alt="our twitter" />
-                      <img src="img/youtube.svg" alt="our youtube" />
-                    </div>
+                    
                   </div>
                   <div class="panel__item">
                     <div class="panel__image">
                       <img
-                        src="https://res2.weblium.site/res/5d5b9f803e7f2900231c0846/5d5bbd711ff8a40023d98957_optimized_1920_c755x503-579x295.webp"
+                        src="img/images/Tovk.webp"
                         alt="person photo"
                       />
                     </div>
                     <h3 class="panel__subtitle">Аліна Товкач</h3>
                     <p class="panel__role">Менеджер закупівлі і логістики</p>
-                    <p class="panel__text">
-                      Anthony opened our company more than 10 years ago, as he
-                      saw that hundreds of businesses need help in various
-                      matters, from process automation to communicating with
-                      customers.
-                    </p>
-                    <div class="panel__socNetworks">
-                      <img src="img/insta.svg" alt="our instagram" />
-                      <img src="img/twitter.svg" alt="our twitter" />
-                      <img src="img/youtube.svg" alt="our youtube" />
-                    </div>
+                    
                   </div>
                   <div class="panel__item">
                     <div class="panel__image">
                       <img
-                        src="https://res2.weblium.site/res/5da36bfc5c96ee00270767df/5da387e2caca24002601e8f1_optimized_1396.webp"
+                        src="img/images/Tkach.jpg"
                         alt="person photo"
                       />
                     </div>
                     <h3 class="panel__subtitle">Дмитро Ткач</h3>
                     <p class="panel__role">Генеральний директор</p>
-                    <p class="panel__text">
-                      Our interaction does not end with paying for our services
-                      and introducing the planned technologies. Tim makes sure
-                      that all our customers are happy with the result of our
-                      work.
-                    </p>
-                    <div class="panel__socNetworks">
-                      <img src="img/insta.svg" alt="our instagram" />
-                      <img src="img/twitter.svg" alt="our twitter" />
-                      <img src="img/youtube.svg" alt="our youtube" />
-                    </div>
+                    
                   </div>
                   <div class="panel__item">
                     <div class="panel__image">
                       <img
-                        src="https://res2.weblium.site/res/5d494a580df84b0023ad229d/5d5cfe1246670d002330fcb8_optimized_930_c930x1395-0x0.webp"
+                        src="img/images/Bendera.jpg"
                         alt="person photo"
                       />
                     </div>
                     <h3 class="panel__subtitle">Роман Бендовський</h3>
                     <p class="panel__role">Інженер-технолог</p>
-                    <p class="panel__text">
-                      Most of all, Ann loves numbers in her work. She is ready
-                      to sit for hours with reports and diagrams so that your
-                      business receives real data and a clear vision of the
-                      future.
-                    </p>
-                    <div class="panel__socNetworks">
-                      <img src="img/insta.svg" alt="our instagram" />
-                      <img src="img/twitter.svg" alt="our twitter" />
-                      <img src="img/youtube.svg" alt="our youtube" />
-                    </div>
+                    
                   </div>
                   <div class="panel__item">
                     <div class="panel__image">
                       <img
-                        src="https://res2.weblium.site/res/5d5b9f803e7f2900231c0846/5d5bbd711ff8a40023d98957_optimized_1920_c755x503-579x295.webp"
+                        src="img/images/Plent.jpeg"
                         alt="person photo"
                       />
                     </div>
                     <h3 class="panel__subtitle">Юлія Плетенчук</h3>
                     <p class="panel__role">Експерт з оцінювання</p>
-                    <p class="panel__text">
-                      Anthony opened our company more than 10 years ago, as he
-                      saw that hundreds of businesses need help in various
-                      matters, from process automation to communicating with
-                      customers.
-                    </p>
-                    <div class="panel__socNetworks">
-                      <img src="img/insta.svg" alt="our instagram" />
-                      <img src="img/twitter.svg" alt="our twitter" />
-                      <img src="img/youtube.svg" alt="our youtube" />
-                    </div>
+                    
                   </div>
                   <div class="panel__item">
                     <div class="panel__image">
                       <img
-                        src="https://res2.weblium.site/res/5d494a580df84b0023ad229d/5d5cfe1246670d002330fcb8_optimized_930_c930x1395-0x0.webp"
+                        src="img/images/Trach.jpeg"
                         alt="person photo"
                       />
                     </div>
                     <h3 class="panel__subtitle">Людмила Ткач</h3>
                     <p class="panel__role">Маркетолог</p>
-                    <p class="panel__text">
-                      Most of all, Ann loves numbers in her work. She is ready
-                      to sit for hours with reports and diagrams so that your
-                      business receives real data and a clear vision of the
-                      future.
-                    </p>
-                    <div class="panel__socNetworks">
-                      <img src="img/insta.svg" alt="our instagram" />
-                      <img src="img/twitter.svg" alt="our twitter" />
-                      <img src="img/youtube.svg" alt="our youtube" />
-                    </div>
                   </div>
                 </div>
                 <div class="btn">
@@ -472,7 +443,9 @@
             </div>
           </div>
         </section>
-        <section class="faq">
+        <section 
+        id="faq"
+        class="faq">
           <div class="faq__container txt-cntr">
             <h2 class="faq__title">FAQ.</h2>
             <p class="faq__text">
@@ -625,7 +598,9 @@
             </div>
           </div>
         </section>
-        <section class="map">
+        <section 
+        id="contact"
+        class="map">
           <div id="map"></div>
           <div class="map__infoWindow">
             <h2 class="map__title">Contacts.</h2>
@@ -633,7 +608,7 @@
             <p class="map__text">26 Regent st., London, Great Britain</p>
             <p class="map__text">+1 (234) 567 89 00</p>
             <p class="map__text">mdx@email.com</p>
-            <button class="map__button">Schedule a meeting</button>
+            <button class="map__button obor">Назначити зустріч</button>
           </div>
         </section>
       </main>
@@ -644,33 +619,42 @@
         <img src="img/primeBudLogo.svg" alt="logo" />
       </div>
       <div class="footer__text">
-        We provide a full range of services to meet our clients' requirements
-        and help their businesses grow.
+        Ми надаємо повний спектр послуг, що відповідають вимогам наших клієнтів.
       </div>
     </div>
     <div class="footer__column-navigation">
       <ul class="footer__navigation">
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__text">Про нас</a>
+          <a
+            href="#aboutCompany"
+            class="navigation__link navigation__link__text"
+            >Про нас</a
+          >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__text">Сервіси</a>
+          <a href="#services" class="navigation__link navigation__link__text"
+            >Сервіси</a
+          >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__text">Відгуки</a>
+          <a href="#howWork" class="navigation__link navigation__link__text"
+            >Як ми працюємо</a
+          >
         </li>
       </ul>
       <ul class="footer__navigation">
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__text">Кейси</a>
+          <a href="#team" class="navigation__link navigation__link__text"
+            >Команда</a
+          >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__text"
+          <a href="#faq" class="navigation__link navigation__link__text"
             >Часті запитання</a
           >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link navigation__text"
+          <a href="#contact" class="navigation__link navigation__link__text"
             >Наші контакти</a
           >
         </li>
@@ -678,9 +662,18 @@
       <div class="footer__social footer__social__text" style="color: #fff">
         Підпишись
         <div class="footer__socNetworks">
-          <img src="img/insta.svg" alt="our instagram" />
-          <img src="img/twitter.svg" alt="our twitter" />
-          <img src="img/youtube.svg" alt="our youtube" />
+          <a
+            href="https://www.instagram.com/prime.bud?igsh=MXdiZDlkM3J3OXpxdQ=="
+            ><img src="img/insta.svg" alt="our instagram"
+          /></a>
+
+          <a href="https://t.me/primebudtech">
+            <img src="img/telegram.svg" alt="our telegram" />
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=61570426175669">
+            <img src="img/facebook.svg" alt="our facebook" />
+          </a>
         </div>
       </div>
     </div>
@@ -708,5 +701,9 @@
 </footer>
     </div>
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script defer src="js/app.min.js"></script>
   </html>
